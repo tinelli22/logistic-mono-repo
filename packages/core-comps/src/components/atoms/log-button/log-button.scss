@@ -1,0 +1,18 @@
+:host {
+  height: 100%;
+  width: 100%;
+  
+  button {
+    @include genBgColors;
+    @include genTextColors;
+    display: block;
+    cursor: pointer;
+    border: none;
+    height: 100%;
+    width: 100%;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import './colors.scss';
+
+@mixin genTextColors {
+  @each $name, $col in $static {
+    &.text-#{$name} {
+      color: $col;
+    }
+  }
+  
+  @each $hn, $hcol in $hover {
+    &.hover:text-#{$hn} {
+      &:hover {
+        color: $hcol;
+      }
+    }
+  }
+}
+
