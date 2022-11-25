@@ -7,10 +7,14 @@ import { Component, Host, h } from '@stencil/core';
 })
 export class LogInputSearch {
 
+
   render() {
     return (
       <Host>
-        <slot></slot>
+        <log-input id="input" />
+        <log-button id="btn" class="font-text">
+          <slot></slot>
+        </log-button>
       </Host>
     );
   }

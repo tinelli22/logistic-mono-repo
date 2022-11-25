@@ -11,13 +11,19 @@ export namespace Components {
         "disable"?: boolean;
         "textColor"?: string;
     }
+    interface LogCard {
+        "backgroundColor"?: string;
+        "backgroundColorHover"?: string;
+    }
     interface LogIcon {
         "name": string;
     }
     interface LogInput {
-        "disable"?: boolean;
+        "disabled"?: boolean;
         "name": string;
-        "type"?: string;
+        "placeHolder"?: string;
+    }
+    interface LogInputSearch {
     }
 }
 export interface LogInputCustomEvent<T> extends CustomEvent<T> {
@@ -31,6 +37,12 @@ declare global {
         prototype: HTMLLogButtonElement;
         new (): HTMLLogButtonElement;
     };
+    interface HTMLLogCardElement extends Components.LogCard, HTMLStencilElement {
+    }
+    var HTMLLogCardElement: {
+        prototype: HTMLLogCardElement;
+        new (): HTMLLogCardElement;
+    };
     interface HTMLLogIconElement extends Components.LogIcon, HTMLStencilElement {
     }
     var HTMLLogIconElement: {
@@ -43,10 +55,18 @@ declare global {
         prototype: HTMLLogInputElement;
         new (): HTMLLogInputElement;
     };
+    interface HTMLLogInputSearchElement extends Components.LogInputSearch, HTMLStencilElement {
+    }
+    var HTMLLogInputSearchElement: {
+        prototype: HTMLLogInputSearchElement;
+        new (): HTMLLogInputSearchElement;
+    };
     interface HTMLElementTagNameMap {
         "log-button": HTMLLogButtonElement;
+        "log-card": HTMLLogCardElement;
         "log-icon": HTMLLogIconElement;
         "log-input": HTMLLogInputElement;
+        "log-input-search": HTMLLogInputSearchElement;
     }
 }
 declare namespace LocalJSX {
@@ -55,22 +75,30 @@ declare namespace LocalJSX {
         "disable"?: boolean;
         "textColor"?: string;
     }
+    interface LogCard {
+        "backgroundColor"?: string;
+        "backgroundColorHover"?: string;
+    }
     interface LogIcon {
         "name"?: string;
     }
     interface LogInput {
-        "disable"?: boolean;
+        "disabled"?: boolean;
         "name"?: string;
-        "onInputBlured"?: (event: LogInputCustomEvent<boolean>) => void;
-        "onInputChanged"?: (event: LogInputCustomEvent<string>) => void;
-        "onInputEntered"?: (event: LogInputCustomEvent<boolean>) => void;
-        "onInputFocused"?: (event: LogInputCustomEvent<boolean>) => void;
-        "type"?: string;
+        "onEntered"?: (event: LogInputCustomEvent<string>) => void;
+        "onFocused"?: (event: LogInputCustomEvent<any>) => void;
+        "onFocusedOut"?: (event: LogInputCustomEvent<any>) => void;
+        "onGetValue"?: (event: LogInputCustomEvent<string>) => void;
+        "placeHolder"?: string;
+    }
+    interface LogInputSearch {
     }
     interface IntrinsicElements {
         "log-button": LogButton;
+        "log-card": LogCard;
         "log-icon": LogIcon;
         "log-input": LogInput;
+        "log-input-search": LogInputSearch;
     }
 }
 export { LocalJSX as JSX };
@@ -78,8 +106,10 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "log-button": LocalJSX.LogButton & JSXBase.HTMLAttributes<HTMLLogButtonElement>;
+            "log-card": LocalJSX.LogCard & JSXBase.HTMLAttributes<HTMLLogCardElement>;
             "log-icon": LocalJSX.LogIcon & JSXBase.HTMLAttributes<HTMLLogIconElement>;
             "log-input": LocalJSX.LogInput & JSXBase.HTMLAttributes<HTMLLogInputElement>;
+            "log-input-search": LocalJSX.LogInputSearch & JSXBase.HTMLAttributes<HTMLLogInputSearchElement>;
         }
     }
 }
