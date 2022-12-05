@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
+import { Component, Host, h, Prop, Event, EventEmitter, Method } from '@stencil/core';
 
 @Component({
   tag: 'log-input',
@@ -17,6 +17,11 @@ export class LogInput {
   @Event() focusedOut: EventEmitter;
   @Event() entered: EventEmitter<string>;
   @Event() getValue: EventEmitter<string>;
+
+  @Method()
+  async getInputRef() {
+    return this.ref;
+  }
 
   private onKeyup(ev: KeyboardEvent) {
     clearTimeout(this.timeout);

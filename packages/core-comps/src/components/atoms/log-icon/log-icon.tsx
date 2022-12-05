@@ -8,7 +8,7 @@ import { Component, h, Host, Prop } from '@stencil/core';
 })
 export class LogIcon {
  
-  @Prop() name: string;
+  @Prop() name?= "airplane";
 
   render() {
    

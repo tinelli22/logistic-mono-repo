@@ -14,6 +14,13 @@
 | `textColor`       | `text-color`       |             | `string`  | `'light'`   |
 
 
+## Events
+
+| Event         | Description | Type               |
+| ------------- | ----------- | ------------------ |
+| `clickButton` |             | `CustomEvent<any>` |
+
+
 ## Dependencies
 
 ### Used by

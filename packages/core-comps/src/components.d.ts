@@ -5,6 +5,8 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { LogInputModel } from "./models/input.model";
+import { LogButtonModel } from "./models/button.model";
 export namespace Components {
     interface LogButton {
         "backgroundColor"?: string;
@@ -16,19 +18,30 @@ export namespace Components {
         "backgroundColorHover"?: string;
     }
     interface LogIcon {
-        "name": string;
+        "name"?: string;
     }
     interface LogInput {
         "disabled"?: boolean;
+        "getInputRef": () => Promise<HTMLInputElement>;
         "name": string;
         "placeHolder"?: string;
     }
     interface LogInputSearch {
+        "buttonProps": LogButtonModel;
+        "inputProps": LogInputModel;
     }
+}
+export interface LogButtonCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLLogButtonElement;
 }
 export interface LogInputCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLLogInputElement;
+}
+export interface LogInputSearchCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLLogInputSearchElement;
 }
 declare global {
     interface HTMLLogButtonElement extends Components.LogButton, HTMLStencilElement {
@@ -73,6 +86,7 @@ declare namespace LocalJSX {
     interface LogButton {
         "backgroundColor"?: string;
         "disable"?: boolean;
+        "onClickButton"?: (event: LogButtonCustomEvent<any>) => void;
         "textColor"?: string;
     }
     interface LogCard {
@@ -92,6 +106,9 @@ declare namespace LocalJSX {
         "placeHolder"?: string;
     }
     interface LogInputSearch {
+        "buttonProps"?: LogButtonModel;
+        "inputProps"?: LogInputModel;
+        "onValue"?: (event: LogInputSearchCustomEvent<string>) => void;
     }
     interface IntrinsicElements {
         "log-button": LogButton;

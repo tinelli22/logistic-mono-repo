@@ -13,23 +13,6 @@ export const config: Config = {
     {
       type: 'dist',
       esmLoaderPath: '../loader',
-      copy: [
-        {
-          src: './src/components/atoms/log-icon/assets/*',
-          dest: './dist/collection/components/atoms/log-icon/assets/*',
-          warn: true
-        }
-      ]
-    },
-    {
-      type: 'dist-custom-elements',
-    },
-    {
-      type: 'docs-readme',
-    },
-    {
-      type: 'www',
-      serviceWorker: null, // disable service workers
     },
   ],
   plugins: [

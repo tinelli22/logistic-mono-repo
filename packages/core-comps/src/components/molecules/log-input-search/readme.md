@@ -5,6 +5,21 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property      | Attribute | Description | Type             | Default     |
+| ------------- | --------- | ----------- | ---------------- | ----------- |
+| `buttonProps` | --        |             | `LogButtonModel` | `undefined` |
+| `inputProps`  | --        |             | `LogInputModel`  | `undefined` |
+
+
+## Events
+
+| Event   | Description | Type                  |
+| ------- | ----------- | --------------------- |
+| `value` |             | `CustomEvent<string>` |
+
+
 ## Dependencies
 
 ### Depends on

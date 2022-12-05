@@ -6,6 +6,9 @@
   button {
     @include genBgColors;
     @include genTextColors;
+    border-radius: inherit;
+    padding: inherit;
+    margin: inherit;
     display: block;
     cursor: pointer;
     border: none;

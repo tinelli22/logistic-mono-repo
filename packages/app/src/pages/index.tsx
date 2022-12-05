@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import {  LogInput, LogInputSearch } from '../components/stencil-generated'
+import {  LogIcon, LogInput, LogInputSearch } from '../components/stencil-generated'
 
 export default function Home() {
   return (
@@ -11,9 +11,10 @@ export default function Home() {
       </Head>
 
       <main>
-        <LogInputSearch>
+        <LogInputSearch onValue={ev => console.log(ev.detail)}>
           <span>Pesquisar</span>
         </LogInputSearch>
+        <LogIcon  />
       </main>
 
     </div>

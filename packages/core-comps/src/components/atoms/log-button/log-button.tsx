@@ -1,4 +1,4 @@
-import { Component, Prop, h, Host } from '@stencil/core';
+import { Component, Prop, h, Host, Event, EventEmitter } from '@stencil/core';
 
 @Component({
   tag: 'log-button',
@@ -12,6 +12,8 @@ export class LogButton {
   
   @Prop({ reflect: true }) disable? = false;
 
+  @Event() clickButton: EventEmitter;
+
   render() {
     const classes = {
      [`bg-${this.backgroundColor}`]: !!this.backgroundColor,
@@ -20,7 +22,7 @@ export class LogButton {
 
     return (
       <Host>
-        <button class={classes} disabled={this.disable}>
+        <button class={classes} disabled={this.disable} onClick={() => this.clickButton.emit()}>
           <slot></slot>
         </button>
       </Host>

@@ -23,7 +23,8 @@
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "generate": "stencil generate",
+    "cpy-assets": "cp -R ./src/assets/* ./dist/collection/assets"
   },
   "dependencies": {
     "@stencil/core": "^2.13.0",
@@ -34,7 +35,8 @@
     "@types/jest": "^27.0.3",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
-    "puppeteer": "^10.0.0"
+    "puppeteer": "^10.0.0",
+    "rollup-plugin-copy": "^3.4.0"
   },
   "license": "MIT"
 }

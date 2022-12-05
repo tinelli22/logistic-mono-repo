@@ -24,6 +24,19 @@
 | `getValue`   |             | `CustomEvent<string>` |
 
 
+## Methods
+
+### `getInputRef() => Promise<HTMLInputElement>`
+
+
+
+#### Returns
+
+Type: `Promise<HTMLInputElement>`
+
+
+
+
 ## Dependencies
 
 ### Used by
