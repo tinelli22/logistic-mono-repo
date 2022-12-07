@@ -3,11 +3,11 @@ import { sass } from "@stencil/sass";
 import { reactOutputTarget as react } from '@stencil/react-output-target';
 
 export const config: Config = {
-  namespace: 'core-comps',
+  namespace: 'webcomponents',
   outputTargets: [
     react({
-      componentCorePackage: 'core-comps',
-      proxiesFile: '../app/src/components/stencil-generated/index.ts',
+      componentCorePackage: 'webcomponents',
+      proxiesFile: '../app/src/components/webcomponents/index.ts',
       includeDefineCustomElements: false,
     }),
     {

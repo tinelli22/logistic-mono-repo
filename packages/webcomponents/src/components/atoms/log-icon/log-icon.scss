@@ -1,0 +1,46 @@
+:host {
+  font-size: 32px;
+
+  i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon-menu:before {
+    content: '\e908';
+  }
+  .icon-facebook:before {
+    content: '\e900';
+  }
+  .icon-instagram:before {
+    content: '\e901';
+  }
+  .icon-twitter:before {
+    content: '\e902';
+  }
+  .icon-airplane:before {
+    content: '\e903';
+  }
+  .icon-boat:before {
+    content: '\e904';
+  }
+  .icon-clock:before {
+    content: '\e905';
+  }
+  .icon-support:before {
+    content: '\e906';
+  }
+  .icon-truck:before {
+    content: '\e907';
+  }
+}

@@ -1,8 +1,9 @@
 
 import type { AppProps } from 'next/app'
 
-import { applyPolyfills, defineCustomElements } from 'core-comps/loader';
-import 'core-comps/dist/collection/assets/styles/icons.css';
+import { applyPolyfills, defineCustomElements } from 'webcomponents/loader';
+import 'webcomponents/dist/collection/assets/styles/icons.css';
+import '../styles/globals.css';
 
 applyPolyfills().then(() => {
   const win = typeof window !== "undefined" && window

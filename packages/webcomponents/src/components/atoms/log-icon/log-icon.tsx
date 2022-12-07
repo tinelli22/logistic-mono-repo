@@ -3,7 +3,6 @@ import { Component, h, Host, Prop } from '@stencil/core';
 @Component({
   tag: 'log-icon',
   styleUrl: 'log-icon.scss',
-  assetsDirs: ["assets"],
   shadow: true,
 })
 export class LogIcon {
@@ -14,7 +13,7 @@ export class LogIcon {
    
     return (
       <Host>
-        <span class={`icon-${this.name}`}></span>
+        <i class={`icon-${this.name}`}></i>
       </Host>
     );
   }
