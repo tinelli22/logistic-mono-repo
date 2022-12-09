@@ -12,3 +12,4 @@ export const LogCard = /*@__PURE__*/createReactComponent<JSX.LogCard, HTMLLogCar
 export const LogIcon = /*@__PURE__*/createReactComponent<JSX.LogIcon, HTMLLogIconElement>('log-icon');
 export const LogInput = /*@__PURE__*/createReactComponent<JSX.LogInput, HTMLLogInputElement>('log-input');
 export const LogInputSearch = /*@__PURE__*/createReactComponent<JSX.LogInputSearch, HTMLLogInputSearchElement>('log-input-search');
+export const LogText = /*@__PURE__*/createReactComponent<JSX.LogText, HTMLLogTextElement>('log-text');

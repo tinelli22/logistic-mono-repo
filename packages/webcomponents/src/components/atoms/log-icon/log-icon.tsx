@@ -8,12 +8,17 @@ import { Component, h, Host, Prop } from '@stencil/core';
 export class LogIcon {
  
   @Prop() name?= "airplane";
+  @Prop() color?= 'primary'
 
   render() {
-   
+    const classes = {
+      [this.color]: !!this.color,
+      [`icon-${this.name}`]: !!this.name
+    }
+
     return (
       <Host>
-        <i class={`icon-${this.name}`}></i>
+        <i class={classes}></i>
       </Host>
     );
   }
