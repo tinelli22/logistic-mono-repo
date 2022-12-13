@@ -1,0 +1,21 @@
+
+
+@mixin xs-heading {
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+@mixin xs-body {
+    font-size: 0.875rem;
+    line-height: 2;
+}
+
+@mixin sm-heading {
+    font-size: 2rem;
+    line-height: 2;
+}
+
+@mixin sm-body {
+    font-size: 1rem;
+    line-height: 2;
+}
