@@ -29,9 +29,7 @@ export class LogInputSearch {
     return (
       <Host>
         <log-input ref={r => this.inputRef = r} id="input" {...this.inputProps} />
-        <log-button {...this.buttonProps} id="btn" class="font-text" onClick={() => this.clickButton()}>
-          <slot></slot>
-        </log-button>
+        <log-button {...this.buttonProps} id="btn" onClick={() => this.clickButton()} />
       </Host>
     );
   }

@@ -1,0 +1,54 @@
+@import './pallete-colors.scss';
+
+
+.bg-primary {
+    background-color: $primary-static;
+
+    &.hover:hover {
+        background-color: $primary-hover;
+    } 
+}
+
+.bg-secondary {
+    background-color: $secondary-static;
+
+    &.hover:hover {
+        background-color: $secondary-hover;
+    } 
+}
+
+.bg-tertiary {
+    background-color: $tertiary-static;
+
+    &.hover:hover {
+        background-color: $tertiary-hover;
+    } 
+}
+
+.bg-light {
+    background-color: $light;
+}
+
+.bg-dark {
+    background-color: $dark;
+}
+
+.bg-gray {
+    background-color: $gray;
+}
+
+.bg-error {
+    background-color: $error;
+}
+
+.bg-warning {
+    background-color: $warning;
+}
+
+.bg-info {
+    background-color: $info;
+}
+
+.bg-success {
+    background-color: $success;
+}

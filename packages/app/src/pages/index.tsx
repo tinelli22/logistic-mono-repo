@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import {  LogIcon, LogInput, LogInputSearch, LogText } from '../components/webcomponents'
+import {  LogButton, LogInputSearch } from '../components/webcomponents'
 
 export default function Home() {
   return (
@@ -11,10 +11,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <LogInputSearch onValue={ev => console.log(ev.detail)}>
-          <LogText>Pesquisar</LogText>
-        </LogInputSearch>
-        <LogIcon />
+        <LogInputSearch  />
       </main>
 
     </div>

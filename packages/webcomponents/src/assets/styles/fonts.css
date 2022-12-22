@@ -1,10 +1,2 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap');
-
-.font-heading {
-    font-family: 'Teko', sans-serif;
-}
-
-:host {
-    font-family: 'Barlow', sans-serif;
-}

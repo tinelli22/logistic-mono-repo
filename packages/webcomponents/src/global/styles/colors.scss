@@ -1,15 +1,42 @@
-$static: (
-  'primary': #ff731d,
-  'secondary': #5f9df7,
-  'tertiary': #1746a2,
-  'light': #fff7e9,
-  'dark': #0d0f0f,
-);
+@import './pallete-colors.scss';
 
-$hover: (
-  'primary': #ff9d61,
-  'secondary': #7fb1f9,
-  'tertiary': #456bb5,
-  'light': #fffcf6,
-  'dark': #161a1a,
-);
+
+.primary {
+    color: $primary-static;
+}
+
+.secondary {
+    color: $secondary-static;
+}
+
+.tertiary {
+    color: $tertiary-static;
+}
+
+.light {
+    color: $light;
+}
+
+.dark {
+    color: $dark;
+}
+
+.gray {
+    color: $gray;
+}
+
+.error {
+    color: $error;
+}
+
+.warning {
+    color: $warning;
+}
+
+.info {
+    color: $info;
+}
+
+.success {
+    color: $success;
+}

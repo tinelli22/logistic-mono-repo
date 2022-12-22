@@ -6,24 +6,28 @@ import { Component, Prop, h, Host, Event, EventEmitter } from '@stencil/core';
   shadow: true,
 })
 export class LogButton {
- 
-  @Prop() backgroundColor?: string = 'primary'
-  @Prop() textColor?: string = 'light'
-  
+  @Prop() label: string;
+  @Prop() backgroundVariant? = 'primary'
+  @Prop() colorVariant? = 'light'
+  @Prop() behavior?: 'static' | 'hover' = 'hover'
   @Prop({ reflect: true }) disable? = false;
 
   @Event() clickButton: EventEmitter;
 
   render() {
+    
     const classes = {
-     [`bg-${this.backgroundColor}`]: !!this.backgroundColor,
-     [`text-${this.textColor}`]: !!this.textColor
-    };
+      [`bg-${this.backgroundVariant}`]: !!this.backgroundVariant,
+      [this.colorVariant]: !!this.colorVariant,
+      [this.behavior]: !!this.behavior
+    }
 
     return (
       <Host>
         <button class={classes} disabled={this.disable} onClick={() => this.clickButton.emit()}>
-          <slot></slot>
+          <span>
+            {this.label}
+          </span>
         </button>
       </Host>
     );

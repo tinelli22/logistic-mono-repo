@@ -9,14 +9,6 @@
 
   #btn {
     margin: 1.5rem auto 0;
-
-    ::slotted(*) {
-      font-weight: 700;
-      font-size: 0.875rem;
-      line-height: 1.813rem;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-    }
   }
 
   @include sm {

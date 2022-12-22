@@ -1,12 +1,17 @@
-
+$bolder: 700;
+$normal: 400;
 
 @mixin xs-heading {
+    font-family: 'Teko', sans-serif;
     font-size: 1.5rem;
+    font-weight: $bolder;
     line-height: 2;
 }
 
 @mixin xs-body {
+    font-family: 'Barlow', sans-serif;
     font-size: 0.875rem;
+    font-weight: $normal;
     line-height: 2;
 }
 

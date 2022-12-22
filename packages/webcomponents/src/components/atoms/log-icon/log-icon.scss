@@ -1,16 +1,7 @@
-@mixin genTextColors {
-  @each $name, $col in $static {
-    &.#{$name} {
-      color: $col;
-    }
-  }
-}
-
 :host {
   font-size: 32px;
   
   i {
-    @include genTextColors();
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
     speak: never;
