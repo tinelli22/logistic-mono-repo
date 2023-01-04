@@ -5,7 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { LogInputModel } from "./models/input.model";
+import { FeedbackStatusModel, LogInputModel } from "./models/input.model";
 import { LogButtonModel } from "./models/button.model";
 export namespace Components {
     interface LogButton {
@@ -28,6 +28,7 @@ export namespace Components {
         "getInputRef": () => Promise<HTMLInputElement>;
         "name": string;
         "placeHolder"?: string;
+        "status"?: FeedbackStatusModel;
     }
     interface LogInputSearch {
         "buttonProps": LogButtonModel;
@@ -110,6 +111,7 @@ declare namespace LocalJSX {
         "onFocusedOut"?: (event: LogInputCustomEvent<any>) => void;
         "onGetValue"?: (event: LogInputCustomEvent<string>) => void;
         "placeHolder"?: string;
+        "status"?: FeedbackStatusModel;
     }
     interface LogInputSearch {
         "buttonProps"?: LogButtonModel;

@@ -17,30 +17,42 @@
   }
 
   .icon-menu:before {
-    content: '\e908';
+    content: "\e908";
   }
   .icon-facebook:before {
-    content: '\e900';
+    content: "\e900";
   }
   .icon-instagram:before {
-    content: '\e901';
+    content: "\e901";
   }
   .icon-twitter:before {
-    content: '\e902';
+    content: "\e902";
   }
   .icon-airplane:before {
-    content: '\e903';
+    content: "\e903";
   }
   .icon-boat:before {
-    content: '\e904';
+    content: "\e904";
   }
   .icon-clock:before {
-    content: '\e905';
+    content: "\e905";
   }
   .icon-support:before {
-    content: '\e906';
+    content: "\e906";
   }
   .icon-truck:before {
-    content: '\e907';
+    content: "\e907";
+  }
+  .icon-error:before {
+    content: "\e909";
+  }
+  .icon-warning:before {
+    content: "\e90a";
+  }
+  .icon-info:before {
+    content: "\e90b";
+  }
+  .icon-success:before {
+    content: "\e90c";
   }
 }

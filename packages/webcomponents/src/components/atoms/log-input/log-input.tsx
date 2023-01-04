@@ -1,4 +1,5 @@
 import { Component, Host, h, Prop, Event, EventEmitter, Method } from '@stencil/core';
+import { FeedbackStatusModel } from '../../../models/input.model';
 
 @Component({
   tag: 'log-input',
@@ -12,6 +13,7 @@ export class LogInput {
   @Prop() name: string;
   @Prop() placeHolder? = '';
   @Prop({ reflect: true }) disabled? = false;
+  @Prop({ reflect: true }) status?: FeedbackStatusModel
 
   @Event() focused: EventEmitter;
   @Event() focusedOut: EventEmitter;
@@ -35,8 +37,14 @@ export class LogInput {
   }
 
   render() {
+    const classes = {
+      [this.status &&`status ${this.status.status}`]: true
+    }
+
     return (
-      <Host>
+      <Host
+        class={classes}
+      >
         <input
           ref={r => (this.ref = r)}
           placeholder={this.placeHolder}
@@ -47,6 +55,7 @@ export class LogInput {
           onKeyUp={ev => this.onKeyup(ev)}
           onFocus={() => this.focused.emit()}
         />
+        {this.status && <span>{this.status.text}</span>}
       </Host>
     );
   }

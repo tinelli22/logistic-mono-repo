@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import {  LogButton, LogInputSearch } from '../components/webcomponents'
+import { LogIcon, LogInput  } from '../components/webcomponents'
 
 export default function Home() {
   return (
@@ -11,7 +11,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <LogInputSearch  />
+        <LogIcon name='error' color='success'/>
+        <LogInput status={{status: 'success', text: 'Tem algo errado ai'}}/>
       </main>
 
     </div>

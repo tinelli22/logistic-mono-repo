@@ -15,4 +15,40 @@
       outline: none;
     }
   }
+
+  span {
+    @include xs-body;
+  }
+}
+
+:host(.status.error) {
+  color: $error;
+
+  input {
+    border: 1px solid $error;
+  }
+}
+
+:host(.status.info) {
+  color: $info;
+
+  input {
+    border: 1px solid $info;
+  }
+}
+
+:host(.status.success) {
+  color: $success;
+
+  input {
+    border: 1px solid $success;
+  }
+}
+
+:host(.status.warning) {
+  color: $warning;
+
+  input {
+    border: 1px solid $warning;
+  }
 }
